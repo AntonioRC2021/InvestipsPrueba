@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'apple',
+    loadChildren: () => import('./pages/apple/apple.module').then( m => m.ApplePageModule)
+  },
+  {
+    path: 'amazon',
+    loadChildren: () => import('./pages/amazon/amazon.module').then( m => m.AmazonPageModule)
+  },
+  {
+    path: 'google',
+    loadChildren: () => import('./pages/google/google.module').then( m => m.GooglePageModule)
+  },
 ];
 
 @NgModule({
